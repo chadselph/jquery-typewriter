@@ -1,0 +1,16 @@
+jquerytypewriter is a jQuery plugin to do the "typewriter" effect.
+
+It's based on the movie WarGames when the computer, Joshua, was playing tic tac toe. (http://www.youtube.com/watch?v=RLJ3zcdPtl8#t=3m32s)
+
+You can see it in action here:
+
+http://norad-wopr.chadselph.com/
+
+Checkout demo.html for example usage.
+
+In general, it's like this:
+ $('.someselector').typewrite({
+    'delay': 100, //time in ms between each letter
+    'extrachar': '', //"cursor" character to append after each display
+    'callback': null // if exists, called after all effects have finished
+});

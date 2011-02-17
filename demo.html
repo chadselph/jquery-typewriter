@@ -1,0 +1,26 @@
+<div class="demo">Here is some text to try!</div>
+<div class="demo">here is the next line</div>
+
+<style type="text/css">
+    .demo {
+        display: none;
+        font-size: 15pt;
+        color: green;
+    }
+</style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquerytypewriter.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+    $('.demo').typewrite({
+        'callback': function(){
+            $('.demo').css('background-color','red');
+        },
+        'delay': 100
+
+    });
+});
+
+</script>
