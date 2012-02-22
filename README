@@ -11,6 +11,6 @@ Checkout demo.html for example usage.
 In general, it's like this:
  $('.someselector').typewrite({
     'delay': 100, //time in ms between each letter
-    'extrachar': '', //"cursor" character to append after each display
+    'extra_char': '', //"cursor" character to append after each display
     'callback': null // if exists, called after all effects have finished
 });
