@@ -15,6 +15,7 @@
             'selector': this,
             'extra_char': '',
             'delay':    100,
+            'trim':     false,
             'callback': null
         };
         if (options) $.extend(settings, options);
@@ -24,7 +25,8 @@
          * of all at the same time. */
         function type_next_element(index) {
             var current_element = $(settings.selector[index]);
-            var final_text = $.trim(current_element.text());
+            var final_text = current_element.text();
+            if (settings.trim) final_text = $.trim(final_text);
             current_element.html("").show();
 
             function type_next_character(element, i) {
