@@ -46,7 +46,9 @@
             type_next_character(current_element, 0);
         }
         type_next_element(0);
-    }
+
+        return this;
+    };
 })(jQuery);
 
 // example: $('.someclass').typewrite();
