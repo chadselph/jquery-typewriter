@@ -1,11 +1,45 @@
-<div class="demo">Here is some text to try!</div>
-<div class="demo">here is the next line</div>
+<meta charset="UTF-8">
+<h1>jquery-typewriter demos</h1>
+
+<h2>50ms delay and callbacks</h2>
+<pre>
+    $('.demo').typewrite({
+        'callback': function(){
+            $('.demo').css('color','red');
+        },
+        'delay': 50
+    });
+</pre>
+
+<div class="demo hidden">Here is some text to try!</div>
+<div class="demo hidden">here is the next line</div>
+<div class="demo hidden">when I'm done, I fire the callback!</div>
+
+
+<h2>Using extra_char</h2>
+
+<pre>
+      $('.demo2-text').typewrite({
+          'extra_char': '▓'
+      });
+</pre>
+<button class="demo2">Run</button>
+
+
+<div class="demo2-text hidden">Using an extra char as a cursor!</div>
+
 
 <style type="text/css">
-    .demo {
+    .hidden {
         display: none;
+    }
+    .demo {
         font-size: 15pt;
         color: green;
+    }
+    .demo2-text {
+        font-size: 15pt;
+        font-family: monospace;
     }
 </style>
 
@@ -16,11 +50,16 @@
 $(document).ready(function() {
     $('.demo').typewrite({
         'callback': function(){
-            $('.demo').css('background-color','red');
+            $('.demo').css('color','red');
         },
-        'delay': 100
-
+        'delay': 50
+    });
+    $('.demo2').click(function() {
+        $('.demo2-text').typewrite({
+            'extra_char': '▓'
+        });
     });
 });
+
 
 </script>
